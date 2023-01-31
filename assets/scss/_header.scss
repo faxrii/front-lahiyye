@@ -1,0 +1,514 @@
+
+.header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    z-index: 9;
+    
+    width: 100%;
+    display: flex;
+    .container{
+        .row{
+            display: flex;
+            align-items: center;
+            .logo-big{
+                display: flex;
+            }
+            .logo-med{
+                display: none;
+            }
+            .nav{
+                display: flex;
+                align-items: center;
+               .main-ul{
+                    width: 100%;
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    margin: 0;
+                    li{
+                        font-size: 15px;
+                        color: #fff;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: 1s;
+                        &:hover{
+                            color: black;
+                        }
+                        .dropdown-menu{
+                            transition: .3s;
+                            display: flex;
+                            align-items: center;
+                            border-radius: 0px;
+                            transform: translateY(-100px);
+                            opacity: 1;
+                            justify-content: space-between;
+                            padding: 0;
+                            width: fit-content+200px;
+                            overflow: hidden;
+                            height: 0;
+                            margin-top: 100px;
+                            border: none;
+                            
+                            .comp{
+                                padding: 0;
+                                margin-left: 10px;
+                               li{
+                                width: 199px;
+                                p{
+                                    color: black;
+                                    margin: 0; 
+                                    font-size: 18px;
+                                }
+                                .line{
+                                    background-color: rgb(143, 139, 139);
+                                    width: 110px;
+                                    height: 1px;
+                                    margin-top: 15px;
+                                    margin-bottom: 15px;
+                                }
+                                ul{
+                                    padding: 0;
+                                    li{
+                                        color: #666;
+                                        display: block;
+                                        margin-bottom: 8px;
+                                        font-size: 13px;
+                                    }
+                                }
+                               }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .icons{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                i{
+                    color: #fff;
+                    margin-left: 15px;
+                    font-size:25px;
+                    transition: 1s;
+                    &:first-child{
+                        font-size: 20px;
+                    }
+                    cursor: pointer;
+                    &:hover{
+                        color: black;
+                    }
+                }
+                .bascet{
+                    position: relative;
+                    i{
+                        font-size: 25px;
+                    }
+                    .bascet-dropdown-menu{
+                        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.15) !important;
+                        background: #fff;
+                        font-family: 'Poppins', sans-serif;
+                        left: auto;
+                        position: absolute;
+                        right: 0;
+                        text-align: left;
+                        width: 350px;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 3;
+                        top: 42px;
+                        padding: 0 15px;
+                        border-radius: 0;
+                        box-shadow: none;
+                        margin: 0;
+                        transition: .6s;
+                        padding: 0;
+                        span{
+                            color: #222;
+                            font-size: 14px;
+                            padding: 10px 0;
+                            display: none;
+                            line-height: 18px;
+                            margin-bottom: 0;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .first{
+                            max-height: 272px;
+                            overflow-y: scroll;
+                            .table{
+                                tbody{
+                                    tr{
+                                        .img-area{
+                                            width: 90px;
+                                            img{
+                                                width: 100%;
+                                            }
+                                        }
+                                        .detail{
+                                            .name{
+                                                margin: 0;
+                                            }
+                                            .price{
+                                                color: #666;
+                                                font-size: 13px;
+                                               
+                                            }
+                                        }
+                                        td{
+                                            button{
+                                                width: 20px;
+                                                height: 26px;
+                                                border-radius: 0px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                i{
+                                                    color: white !important;
+                                                    font-size: 12px;
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .second{
+                            margin-top: 14px;
+                            padding-bottom: 19px;
+                            .btn-default{
+                                background-color: #ed4c4a;
+                                border-color: #ed4c4a;
+                                color: #fff;
+                                outline: none;
+                                font-size: 14px;
+                                line-height: 18px;
+                                font-weight: 400;
+                                padding: 10px 20px;
+                                text-transform: uppercase;
+                                border-radius: 0;
+                                margin-right: 15px;
+                            }
+                            .btn-primary{
+                                color: #fff;
+                                background-color: #232323;
+                                border: 1px solid #232323;
+                                opacity: 1;
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                line-height: 18px;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                border-radius: 0;
+                                -webkit-transition: all 0.5s;
+                                -moz-transition: all 0.5s;
+                                -o-transition: all 0.5s;
+                                transition: all 0.5s;
+                                outline: none;
+                               
+                            }
+                            tbody{
+                                td{
+                                    font-size: 13px;
+                                    padding: 3px 14px;
+                                    border: none;
+                                }
+                                .text-right{
+                                    color: #7a7a7a;
+                                }
+                            }
+                        }
+                    }
+                }
+                .user-btn{
+                    i{
+                        font-size: 26px !important;
+                    }
+                    .user-dropdown-menu{
+                        box-shadow: 1px 1px 1px 0px rgba(1, 1, 1, 0.15) !important;
+                        background: #fff;
+                        font-family: 'Poppins', sans-serif;
+                        left: auto;
+                        position: absolute;
+                        right: 210px;
+                        border-radius: 0;
+                        box-shadow: none;
+                        text-align: left;
+                        width: 350px;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 3;
+                        top: 60px;
+                        padding:0;
+                        margin: 0;
+                        transition: .6s;
+                        li{
+                            padding: 5px;
+                            a{
+                                color: rgb(145, 145, 145);
+                                font-size: 13px;
+                                font-weight: 500;
+                                padding: 5px 10px;
+                            }
+                        }
+                        .btn-group{
+                            display: block;
+                            span{
+                                color: #222;
+                                display: inline-block;
+                                padding-left: 10px;
+                                font-size: 14px;
+                            }
+                            ul{
+                                list-style: none;
+                                display: flex;
+                                align-items: center;
+                                
+                                padding: 0;
+                                li{
+                                    button{
+                                        color: rgb(145, 145, 145);
+                                        padding: 0;
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                        padding: 5px 10px;
+                                        text-decoration: none;
+                
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                .search-btn{
+                    .search-dropdown-menu{
+                        box-shadow: 1px 1px 1px 0px rgba(1, 1, 1, 0.15) !important;
+                        background: #fff;
+                        right: 210px; 
+                        font-family: 'Poppins', sans-serif;
+                        left: auto;
+                        position: absolute;
+                        border-radius: 0;
+                        box-shadow: none;
+                        text-align: left;
+                        width: 350px;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 3;
+                        top: 60px;
+                        padding:0;
+                        margin: 0;
+                        transition: .6s;
+                        li{
+                            width: 100%;
+                            position: relative;
+                            padding: 7px;
+
+                            .btn{
+                                position: absolute;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                right: 5px;
+                                padding: 0;
+                                height: 100%;
+                                top: 0;
+                                i{
+                                    color: #999;
+                                    font-size: 13px;
+                                }
+                            }
+                            input{
+                                color: rgb(156, 155, 155);
+                                width: 100%;
+                                font-size: 14px;
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .menu{
+                display: none;
+                .search-btn{
+                    .search-dropdown-menu{
+                        box-shadow: 1px 1px 1px 0px rgba(1, 1, 1, 0.15) !important;
+                        background: #fff;
+                        font-family: 'Poppins', sans-serif;
+                        top: 60px;
+                        padding:0;
+                        margin: 0;
+                        position: absolute;
+                        right: 210px;
+                        text-align: left;
+                        width: 350px;
+                        height: 0;
+                        overflow: hidden;
+                        z-index: 3;
+                        left: auto;
+                        border-radius: 0;
+                        box-shadow: none;
+                        transition: .6s;
+                        li{
+                            width: 100%;
+                            position: relative;
+                            padding: 7px;
+
+                            .btn{
+                                position: absolute;
+                                right: 5px;
+                                padding: 0;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: 0;
+                                i{
+                                    color: rgb(156, 156, 156);
+                                    font-size: 13px;
+                                }
+                            }
+                            input{
+                                color: rgb(156, 156, 156);
+                                width: 100%;
+                                font-size: 14px;
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.shop-header{
+    background-color: white !important;
+    .nav{
+        .main-ul{
+            li{
+                color: black !important;
+            }
+        }
+        
+    }
+    .icons{
+        i{
+            color: black !important;
+        }
+    }
+}
+.header-med{
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    
+    .container{
+        .row{
+            display: flex;
+            align-items: center;
+            
+            .logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .menu{
+                padding: 0;
+                i{
+                    font-size: 21px;
+                    &:first-child{
+                        font-size: 24px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .icons{
+                padding: 0;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                i{
+                    font-size: 21px;
+                    &:first-child{
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.swipe-nav{
+    background-color: #fff;
+    height: 100vh;
+    width: 300px;
+    top: 0;left: 0;
+    position: absolute;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: .5s;
+    a{
+        color: black;
+    }
+    .close{
+        display: flex;
+        justify-content: flex-end;
+        font-weight: 900;
+        i{
+            margin-right: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    }
+    ul{
+        padding: 0;
+        li{
+            list-style: none;
+        }
+    }
+    .dropdown{
+        width: 100%;
+        .drop-btn{
+            width: 100%;
+            border-bottom: 1px solid #f2f2f2;
+            color: black;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0px;
+            background-color: transparent;
+            border: none;
+        }
+        .dropdown-menu{
+            width: 100%;
+            border-radius: 0px;
+            li{
+                border-bottom: 1px solid #f2f2f2;
+            }
+        }
+    }
+}
+
+
+
+

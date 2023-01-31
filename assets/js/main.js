@@ -1,0 +1,165 @@
+
+
+$('.sponsor-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:false,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:3,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:5,
+            nav:false,
+            loop:true
+        }
+    }
+})
+$('.shop-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:3,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+            dots:false,
+            loop:false
+        }
+    }
+})
+$('.related-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:3,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            dots:false,
+            loop:true
+        }
+    }
+})
+$('.client-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:1,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            dots:false,
+            loop:false
+        }
+    }
+})
+
+$('.touch-slide').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        600:{
+            items:2,
+            nav:true,
+            dots:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            dots:false,
+            loop:false
+        }
+    }
+})
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:1,
+            nav:true,
+            loop:true
+        }
+    }
+})
+
+
+let productLinks=document.querySelectorAll(".product-link")
+
+productLinks.forEach((link)=>{
+    
+    link.addEventListener("click",function(){
+        productLinks.forEach((link)=>{
+            if (link.classList.contains("active-link")) {
+                link.classList.remove("active-link")
+            }
+        })
+        let id=link.getAttribute("data-link")
+        let panels=document.querySelectorAll(".tab-pane")
+        link.classList.add("active-link")
+        panels.forEach((panel)=>{
+            if (panel.classList.contains("active")) {
+                panel.classList.remove("active")
+            }
+        })
+        
+        document.querySelector(`#${id}`).classList.add("active")
+    })
+})
